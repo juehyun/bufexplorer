@@ -1,5 +1,5 @@
 # Introduction
-- This repositor is folked from "jlanzarotta/bufexplorer"
+- This repository is folked from "jlanzarotta/bufexplorer"
 - Refer the original repository for detailed information
 
 # Changes
