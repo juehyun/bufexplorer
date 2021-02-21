@@ -4,5 +4,9 @@
 
 # Changes
 - I used to open files in multiple split windows and multiple tabs, When I run BufExplorer and select buffer, I expect vim move me to the window which opened the buffer
-    - Move to the tab is OK, but
-    - Open the buffer unexpected split window
+	- Move to the tab is OK, but
+	- Open the buffer unexpected split window
+	- Change the 'SelectBuffer' function code to fix it
+
+- Add "Esc" key to close BufExplorer
+

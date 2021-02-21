@@ -503,6 +503,7 @@ function! s:MapKeys()
 
     nnoremap <script> <silent> <nowait> <buffer> <2-leftmouse> :call <SID>SelectBuffer()<CR>
     nnoremap <script> <silent> <nowait> <buffer> <CR>          :call <SID>SelectBuffer()<CR>
+    nnoremap <script> <silent> <nowait> <buffer> <Esc>         :call ToggleBufExplorer()<CR>|"juehyun
     nnoremap <script> <silent> <nowait> <buffer> <F1>          :call <SID>ToggleHelp()<CR>
     nnoremap <script> <silent> <nowait> <buffer> <s-cr>        :call <SID>SelectBuffer("tab")<CR>
     nnoremap <script> <silent> <nowait> <buffer> a             :call <SID>ToggleFindActive()<CR>
@@ -919,7 +920,10 @@ function! s:SelectBuffer(...)
             endif
 
             " Switch to the selected buffer.
-            execute "keepjumps keepalt silent b!" _bufNbr
+            let _bufName = expand("#"._bufNbr.":p")|"juehyun
+            execute "drop ".escape(_bufName, " ")|"juehyun 
+            "execute "keepjumps keepalt silent b!" _bufNbr
+
         endif
 
         " Make the buffer 'listed' again.
