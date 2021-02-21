@@ -1,4 +1,4 @@
-# Introduction
+# BufExplorer
 - This repository is folked from "jlanzarotta/bufexplorer"
 - Refer the original repository for detailed information
 
